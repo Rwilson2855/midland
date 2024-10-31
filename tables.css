@@ -1,0 +1,39 @@
+header, footer  {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.green-container {
+    display: flex;
+    flex-basis: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.green-box {
+    flex-basis: 80%;
+    background-color: green;
+    margin: 5px;
+}
+.red-container {
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.red-box {
+    margin: 2px;
+    background: red;
+    min-height: 100px;
+}
+*{
+    text-align: center;
+}
