@@ -18,3 +18,13 @@ header {
 
 
 }
+footer {
+    font-size: 40px;
+    color: blueviolet;
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    
+    
+}
