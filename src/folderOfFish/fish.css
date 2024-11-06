@@ -1,14 +1,18 @@
 .mydivlinks {
-    padding: 20px;
+    padding: 10px;
     background-color: rgb(6, 56, 69);
     color: white;
     text-align: center;
-    font-size: auto
-    
+    flex-grow: 1;
+}
+.mydivlinks-container {
+    width: 100%;
+    display: flex;
 
 }
-button:focus {
-    background: red;
+
+button:first-of-type {
+    background: grey;
 }
 header {
     font-size: 40px;
@@ -17,6 +21,10 @@ header {
     text-align: right;
 
 
+
+}
+.tabcontent {
+    background-color: aquamarine;
 }
 footer {
     font-size: 40px;
