@@ -46,6 +46,16 @@ footer {
   justify-content: center;
   align-items: center;
 }
+  .transparent-fish {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 1400px;
+  float: left;
+  margin-right: 400px;
+}
+.background-demo {
+  padding: 20px;
+}
 .footer-text {
   background-color: black;
   padding: 5px 15px;
@@ -56,4 +66,8 @@ p {
   width: 50%;
   margin-left: 50%;
   padding: 20px;
+}
+.fish {
+  width: 100px;
+  height: 400px;
 }
