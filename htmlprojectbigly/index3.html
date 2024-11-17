@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bigly page 3</title>
-    <link rel="stylesheet" href="bigly.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="bigly.css" />
+</head>
+<body>
     <div class="button-groups">
         <a href="index1.html" target="_blank">
-            <button style="width: 33%;">Page 1</button>
+            <button style="width: 33%">Page 1</button>
         </a>
         <a href="index2.html" target="_blank">
-            <button style="width: 33%;">Page 2</button>
-            </a>
-            <button style="width: 33%;">Page 3</button>
-  </body>
+            <button style="width: 33%">Page 2</button>
+        </a>
+        <button style="width: 33%" class="active">Page 3</button>
+    </div>
+    <form action="/action_page.php">
+        <label for="fname">First name:</label><br />
+        <input type="text" id="fname" name="fname" value="Tanner" /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" value="Roberts" /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" placeholder="Enter your message here..."></textarea><br />
+
+        <input type="submit" value="Submit" />
+    </form>
+</body>
 </html>
