@@ -4,7 +4,7 @@ button:hover {
 }
 .sidecolumn {
   width: 250px;
-  background-color: blueviolet;
+  background-color: #2e2d4d;
   padding: 20px;
 }
 .biglywrap {
@@ -23,7 +23,7 @@ button:hover {
 .main-content {
   flex: 1;
   padding: 20px;
-  background-color: brown;
+  background-color: #2a7f62;
 }
 
 .flex-container {
@@ -35,8 +35,7 @@ button:hover {
 .flex-box {
   width: 300px;
   height: 200px;
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: #2C5658;
   padding: 15px;
   margin-bottom: 20px;
   display: flex;
@@ -67,7 +66,7 @@ html {
   scroll-behavior: smooth;
 }
 .active {
-  background-color: #4caf50;
+  background-color: #EA526F;
   color: white;
 }
 textarea {
@@ -79,13 +78,13 @@ textarea {
 }
 input[type="text"],
 input[type="email"] {
-    width: 200px;
-    padding: 8px;
+  width: 200px;
+  padding: 8px;
 }
 
 textarea {
-    width: 100%;
-    height: 150px;
-    padding: 8px;
-    resize: vertical;
+  width: 100%;
+  height: 150px;
+  padding: 8px;
+  resize: vertical;
 }
