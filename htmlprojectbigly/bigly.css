@@ -98,7 +98,7 @@ form {
   padding: 30px;
   border-radius: 8px;
   max-width: 500px;
-  margin: 50px auto; /* This centers the form horizontally */
+  margin: 50px auto;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 form label {
