@@ -3,31 +3,31 @@
 //! Take an input from the user. Starting with the 4th character,
 //! log all characters until the end of the input.
 //! If the input is shorter than 4 characters, nothing should be logged.
-/*
-let userInput = prompt("Enter some text:");
+
+const userInput = prompt("Enter some text:");
 
 if (userInput.length >= 4) {
-    let result = "";
-    let i = 3;
-    while (i < userInput.length) {
-        result += userInput[i];
-        i++;
-    }
-    console.log(result);
+  let result = "";
+  let i = 3;
+  while (i < userInput.length) {
+    result += userInput[i];
+    i++;
+  }
+  console.log(result);
 }
-//*/ // -----------------------------------------------------------------
+// -----------------------------------------------------------------
 //! Pick a random number. Prompt the user to guess a number. If the number is correct,
 //! end the loop and tell the user how many tries it took to guess.
 //! If it is incorrect, continue the loop.
 //! (Test functionality by logging the number that was randomly generated in the prompt).
-let personInput = prompt("Guess a number!");
-let correctNumber = 4;
+/*const personInput = prompt("Guess a number between 1 and 10");
+const correctNumber = 4;
 personInput = Number(personInput);
 if (personInput === correctNumber) {
     console.log ("How did you guess that!");
 }
     else { console.log ("Try guessing again!")};
-
+*/
 
 // -----------------------------------------------------------------
 //! Simulate a coin flip. Start a counter at 0. If the initial flip was heads,
@@ -43,3 +43,7 @@ if (personInput === correctNumber) {
 //!  - Log every number before theirs and every number from 100 counting down to theirs in two separate loops.
 //!  - If their name is your name send an alert saying that it is a great name
 //!  - Log their name in reverse to the console.
+const theyInput = prompt("What is your first name?");
+const name = theyInput;
+const numberInput = prompt("Say a number between 1 and 100 please");
+
