@@ -1,0 +1,1 @@
+const playerName = prompt ("What is your name?")
