@@ -22,15 +22,7 @@ let formTheParty = prompt("You decided to form a party, huh? I hope you were sma
 if (formTheParty === "Frieren the Mage") {
     console.log("You have chosen wisely, she will make an excellent addition to your party, now you have set off, are you going to train against level 1 boars, or battle the demon lord?")
 } else if (formTheParty === "Patches the Betrayer") {
-    console.log ("What a poor choice, he kills you in your sleep and steals all of your belongings, you wake back up and decide to choose the mage, Frieren, and hear a voice say 'You have chosen wisely, she will make an excellent addition to your party, now you have set off, are you going to train against level 1 boars, or battle the demon lord?'")
-} else {
-    console.log("Invalid Choice");
-}
-let battlingAlready= prompt()
-if () {
-    console.log()
-} else if () {
-    console.log ()
+    console.log ("What a poor choice, really? His name has 'the betrayer' in it, he kills you in your sleep and steals all of your belongings, you wake back up and decide to choose the mage, Frieren, and hear a voice say 'You have chosen wisely, she will make an excellent addition to your party, now you have set off, are you going to train against level 1 boars, or battle the demon lord?'")
 } else {
     console.log("Invalid Choice");
 }
