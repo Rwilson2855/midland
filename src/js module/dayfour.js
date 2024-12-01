@@ -66,14 +66,18 @@ function rightTriangle(a, x, y) {
 //!   - If they have more health than all of the attacks, they are able to survive.
 const monsterDamage = [2, 4, 2, 1, 3]
 let warriorHealth = 15
-let sum = 0
+let totalDamage = 0
 for (let i = 0; i < monsterDamage.length; i++){
-    sum += monsterDamage[i];
+    totalDamage += monsterDamage[i];
 }
-function damageTaken(warriorHealth, monsterDamage){
-return console.log(warriorHealth - monsterDamage)
+function damageTaken(warriorHealth, totalDamage){
+return (warriorHealth - totalDamage)
 }
-
+let remainingHealth = damageTaken(warriorHealth, totalDamage)
+console.log(remainingHealth)
+if (remainingHealth > 0)
+    console.log ("You beat all the monsters!")
+else console.log ("You have tragically perished")
 //? Example of monster damage: [1, 3, 2, 8, 5];
 //? Example of warrior health: 10;
 //? Since 1 + 3 + 2 + 8 + 5 = 19 and 10 - 19 < 0 they could not survive
