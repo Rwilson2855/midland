@@ -1,5 +1,5 @@
 //! Write the following functions without using prototypical methods:
-
+/*
 // -----------------------------------------------------------------
 //! Pass a number into a function that will return the absolute value of that number
 //! (absolute value of -1 is 1, and absolute value of 1 is 1) without the use of built in math functions.
@@ -57,12 +57,22 @@ function rightTriangle(a, x, y) {
 
  console.log(rightTriangle(3, 4, 5));
  console.log(rightTriangle(3, 8, 8.544));
-// -----------------------------------------------------------------
+*/
+ // -----------------------------------------------------------------
 //! Write a function to check to see if a warrior can beat all of the monsters in a dungeon.
 //! Supply the function with the amount of damage each of the monsters do (in an array),
 //! and then the number of health the warrior has.
 //!   - If the warrior doesn't have enough health to take all of the attacks, they are unable to survive
 //!   - If they have more health than all of the attacks, they are able to survive.
+const monsterDamage = [2, 4, 2, 1, 3]
+let warriorHealth = 15
+let sum = 0
+for (let i = 0; i < monsterDamage.length; i++){
+    sum += monsterDamage[i];
+}
+function damageTaken(warriorHealth, monsterDamage){
+return console.log(warriorHealth - monsterDamage)
+}
 
 //? Example of monster damage: [1, 3, 2, 8, 5];
 //? Example of warrior health: 10;
