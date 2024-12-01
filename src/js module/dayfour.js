@@ -21,13 +21,9 @@ console.log (pow(3,3))
 //! If any of the banned words appear in the array of words, replace them with "REDACTED.
 // First, arrays need square brackets []
 const dirtyWords = ["poopoo", "stinky", "doodoo"];
-
-// Function needs to accept two arrays - banned words and words to check
 function bannedWords(bannedList, wordsToCheck) {
-    // Convert wordsToCheck to an array if it isn't already
     let wordArray = Array.isArray(wordsToCheck) ? wordsToCheck : [...wordsToCheck];
 
-    // Go through each word and replace if it's banned
     return wordArray.map(word => {
         if (bannedList.includes(word)) {
             return "REDACTED";
@@ -35,10 +31,7 @@ function bannedWords(bannedList, wordsToCheck) {
         return word;
     });
 }
-
-// Test it with arrays
 console.log(bannedWords(dirtyWords, ["nice", "smelly", "poopoo", "stinky", "maggie"]));
-// figure out why claude likes it like this
 // -----------------------------------------------------------------
 //! Write a function to see if a pizza can be split evenly amongst a group of people.
 //! The function should take two arguments: the number of people present, and the number of slices of the pizza.
@@ -46,11 +39,24 @@ console.log(bannedWords(dirtyWords, ["nice", "smelly", "poopoo", "stinky", "magg
 //!   - If it cannot, say it cannot be split evenly and ALSO list how many people will go without an extra slice.
 //! Hint: use the modulo operator (%)
 
+function splitPizzaEvenly(x,y) {
+    if (x % y === 0) {
+    return x % y;
+}
+return console.log("Can't be split evenly", (y - (x % y)))
+}
+console.log(splitPizzaEvenly(13,6))
 // -----------------------------------------------------------------
 //! Write a function to see if a triangle is a right triangle.
 //! It's a right triangle if the square of the longest side (hypotenuse) is equal to the sum of the squares of the other sides.
 //! Assume that 'a' is the longest side for now, but think about how you might need to change it if we didn't know which one is the hypotenuse.
 
+function rightTriangle(a, x, y) {
+    return (a * a) + (x * x) === (y * y);
+ }
+
+ console.log(rightTriangle(3, 4, 5));
+ console.log(rightTriangle(3, 8, 8.544));
 // -----------------------------------------------------------------
 //! Write a function to check to see if a warrior can beat all of the monsters in a dungeon.
 //! Supply the function with the amount of damage each of the monsters do (in an array),
