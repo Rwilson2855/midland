@@ -1,3 +1,4 @@
+
 "use strict";
 
 const Rock = 0;
@@ -47,3 +48,4 @@ allButtonsArray.forEach(button => {
 });
 
 console.log(allButtonsArray);
+
