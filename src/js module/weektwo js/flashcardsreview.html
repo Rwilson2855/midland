@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Flashcards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .flashcard {
+            background-color: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            position: relative;
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .category {
+            margin-bottom: 30px;
+        }
+        .category-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            margin-bottom: 15px;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Flashcards</h1>
+    <div class="controls">
+        <button onclick="showAllAnswers()">Show All</button>
+        <button onclick="hideAllAnswers()">Hide All</button>
+    </div>
+    <div id="flashcards"></div>
+
+    <script>
+        const flashcardsData = {
+            "JavaScript Basics": [
+                {
+                    question: "How would you declare a variable in JavaScript?",
+                    answer: "• Using let for block-scoped variables\n• Using const for constants\n• Using var for function-scoped variables (older style)"
+                },
+                {
+                    question: "What is the difference between == and ===?",
+                    answer: "• == performs type coercion before comparison\n• === compares both value and type without coercion"
+                },
+                {
+                    question: "Name all the main primitive types.",
+                    answer: "• String\n• Number\n• Boolean\n• undefined\n• null\n• Symbol\n• BigInt"
+                },
+                {
+                    question: "What will the value of x be after: let x = [1, 2, 3, 4, 5]; let y = x; y[0] = 0;",
+                    answer: "x will be [0, 2, 3, 4, 5] because arrays are passed by reference"
+                },
+                {
+                    question: "What is the basic structure of a for loop?",
+                    answer: "for (initialization; condition; increment/decrement) {\n    // code block\n}"
+                },
+                {
+                    question: "What does 'use strict' do?",
+                    answer: "'use strict' enables strict mode which catches common coding mistakes and prevents certain unsafe actions"
+                },
+                {
+                    question: "How would you access user's dog's name from: let user = { name: 'Billy', petDog: { name: 'Roger' } };",
+                    answer: "user.petDog.name"
+                },
+                {
+                    question: "What is '2' + '3' in JavaScript?",
+                    answer: "'23' (string concatenation)"
+                },
+                {
+                    question: "What is the preferred way to include variables in a string?",
+                    answer: "Template literals using backticks:\n`Hello ${userName}`"
+                },
+                {
+                    question: "How would you have functionality run after one second? What about run EVERY second?",
+                    answer: "After one second:\nsetTimeout(() => {}, 1000);\n\nEvery second:\nsetInterval(() => {}, 1000);"
+                },
+                {
+                    question: "What is scope and what problems can it solve and/or fix?",
+                    answer: "Scope determines variable accessibility. It helps prevent naming conflicts and manages variable lifetime."
+                },
+                {
+                    question: "How would you declare a function and then invoke it?",
+                    answer: "Declaration:\nfunction myFunction() {\n    // code\n}\n\nInvocation:\nmyFunction();"
+                },
+                {
+                    question: "What are parameters and arguments?",
+                    answer: "• Parameters are variables listed in function definition\n• Arguments are values passed to the function when called"
+                },
+                {
+                    question: "What are the two main ways to include JavaScript to a webpage?",
+                    answer: "1. Internal using <script> tags\n2. External using <script src='file.js'>"
+                },
+                {
+                    question: "What would happen with: const x = 4; x = 5;",
+                    answer: "This would throw an error because you can't reassign a const variable"
+                },
+                {
+                    question: "What would log to the console: let t = true; let f = false; if (t && (f || t) && (t || f || f)) { console.log('It is true'); } console.log('It is false');",
+                    answer: "It would log:\n'It is true'\n'It is false'"
+                },
+                {
+                    question: "What is an arrow function and why might you use one?",
+                    answer: "Arrow functions are concise function expressions. They have implicit return and don't bind their own 'this'. They're useful for shorter syntax and maintaining the parent scope's 'this' context."
+                }
+            ],
+            "DOM": [
+                {
+                    question: "What is the DOM?",
+                    answer: "The Document Object Model (DOM) is a programming interface for HTML documents. It represents the page as a tree-like structure where each node is an object representing a part of the document."
+                },
+                {
+                    question: "How would you select any element with a class of 'class1'?",
+                    answer: "Two methods:\n• document.getElementsByClassName('class1')\n• document.querySelectorAll('.class1')"
+                },
+                {
+                    question: "Name some of the most common events and how you would listen for them?",
+                    answer: "Common events with listeners:\n• Click: element.addEventListener('click', callback)\n• Submit: element.addEventListener('submit', callback)\n• Keyup: element.addEventListener('keyup', callback)\n• Change: element.addEventListener('change', callback)\n• Load: element.addEventListener('load', callback)"
+                },
+                {
+                    question: "How would you change the style of an element with JavaScript?",
+                    answer: "element.style.propertyName = 'value'\nFor example: element.style.backgroundColor = 'red'"
+                },
+                {
+                    question: "How do you create and add a new element to the page with JavaScript?",
+                    answer: "const newElement = document.createElement('div');\nparentElement.appendChild(newElement);"
+                },
+                {
+                    question: "How do you get the element that fired an event callback?",
+                    answer: "Use event.target in the event listener callback function"
+                },
+                {
+                    question: "How would you remove an element with JavaScript (assuming you have the element saved in a variable called toDelete)?",
+                    answer: "toDelete.remove();"
+                }
+            ],
+            "Prototypical Functions": [
+                {
+                    question: "How would you turn an array into a string or vice versa?",
+                    answer: "Array to string: array.join()\nString to Array: string.split()"
+                },
+                {
+                    question: "How would you generate a random number?",
+                    answer: "Math.random()"
+                },
+                {
+                    question: "How would you loop through all elements in an array and add 1 to each of them?",
+                    answer: "array.forEach((item, index, arr) => {\n    arr[index] = item + 1;\n});"
+                },
+                {
+                    question: "How would you remove all elements that are less than 4 from an array?",
+                    answer: "array = array.filter(item => item >= 4);"
+                },
+                {
+                    question: "How would you make all letters in a string lower case?",
+                    answer: "string.toLowerCase()"
+                },
+                {
+                    question: "How would you add new elements to the start or end of an array?",
+                    answer: "To the start: array.unshift(element)\nTo the end: array.push(element)"
+                },
+                {
+                    question: "How and why would you make a shallow copy of an array?",
+                    answer: "Methods:\n• Spread operator: [...array]\n• Array.from(array)\n• array.slice()\n\nWhy: To create an independent copy while maintaining references to nested objects. Useful when you need to modify an array without affecting the original."
+                }
+            ]
+        };
+
+        function createFlashcard(question, answer) {
+            const formattedAnswer = answer.replace(/\n/g, '<br>');
+            return `
+                <div class="flashcard" onclick="toggleAnswer(this)">
+                    <div class="question">${question}</div>
+                    <div class="answer">${formattedAnswer}</div>
+                </div>
+            `;
+        }
+
+        function renderFlashcards() {
+            const container = document.getElementById('flashcards');
+            Object.entries(flashcardsData).forEach(([category, cards]) => {
+                const categoryHtml = `
+                    <div class="category">
+                        <h2 class="category-title">${category}</h2>
+                        ${cards.map(card => createFlashcard(card.question, card.answer)).join('')}
+                    </div>
+                `;
+                container.innerHTML += categoryHtml;
+            });
+        }
+
+        function toggleAnswer(element) {
+            const answer = element.querySelector('.answer');
+            answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function showAllAnswers() {
+            document.querySelectorAll('.answer').forEach(answer => {
+                answer.style.display = 'block';
+            });
+        }
+
+        function hideAllAnswers() {
+            document.querySelectorAll('.answer').forEach(answer => {
+                answer.style.display = 'none';
+            });
+        }
+
+        renderFlashcards();
+    </script>
+</body>
+</html>
