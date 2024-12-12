@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Canvas for Draw</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="controls">
-        <div class="color-options">
-            <label>
-                <input type="radio" name="color" value="#FFFFFF" checked>
-                White
-            </label>
-            <label>
-                <input type="radio" name="color" value="#FF0000">
-                Red
-            </label>
-            <label>
-                <input type="radio" name="color" value="Blue">
-                Blue
-            </label>
+      <div class="color-options">
+        <div class="swatch swatch-color-blue">
+          <input class="swatch-value" type="hidden" value="rgb(0, 0, 255)" />
         </div>
-        <label>
-            Line Width:
-            <input type="range" id="linewidth" min="1" max="50" value="5">
-        </label>
-        <button id="clear">Clear Canvas</button>
+        <div class="swatch swatch-color-red">
+          <input class="swatch-value" type="hidden" value="rgb(255, 0, 0)" />
+        </div>
+        <div class="swatch swatch-color-white swatch-selected">
+          <input class="swatch-value" type="hidden" value="rgb(255, 255, 255)" />
+        </div>
+      </div>
+      <label>
+        Line Width:
+        <input type="range" id="linewidth" min="1" max="50" value="5" />
+      </label>
+      <button id="clear">Clear Canvas</button>
     </div>
-    <script src="./drawing.js">
-    </script>
-</body>
+    <script src="./drawing.js"></script>
+  </body>
 </html>
