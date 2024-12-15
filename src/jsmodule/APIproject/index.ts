@@ -1,1 +1,0 @@
-const apiKey: string = 'http://www.omdbapi.com/?apikey=[85ea52b7]';

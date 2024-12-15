@@ -1,0 +1,1 @@
+const apiKey = 'http://www.omdbapi.com/?apikey=[85ea52b7]';
