@@ -1,0 +1,46 @@
+.movie-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+.topnav {
+    margin-bottom: 20px;
+}
+#movieSearch {
+    padding: 8px;
+    width: 200px;
+}
+#type {
+    padding: 8px;
+    margin-left: 10px;
+}
+#year {
+padding: 8px;
+margin-left: 10px;
+}
+body {
+    background-color: #C33C54;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    background-color: #254E70;
+    padding: 20px 0;
+}
+footer {
+    text-align: center;
+    font-size: 40px;
+    bottom: 0;
+    background-color: #254E70;
+    color: black;
+    padding: 20px 0;
+    margin-top: auto;
+}

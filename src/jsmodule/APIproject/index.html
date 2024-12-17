@@ -4,34 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Search</title>
-    <style>
-        .movie-card {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 8px;
-            max-width: 300px;
-            display: inline-block;
-            vertical-align: top;
-        }
-        .topnav {
-            margin-bottom: 20px;
-        }
-        #movieSearch {
-            padding: 8px;
-            width: 200px;
-        }
-        #type {
-            padding: 8px;
-            margin-left: 10px;
-        }
-        #year {
-    padding: 8px;
-    margin-left: 10px;
-}
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <header>Imdb search api</header>
     <div class="topnav">
         <a class="active" href=""></a>
         <input type="text" id="movieSearch" placeholder="Search for a movie..." />
@@ -42,12 +18,16 @@
         <option value="Adventure">Adventure</option>
         <option value="Thriller">Thriller</option>
         <option value="Romance">Romance</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Western">Western</option>
     </select>
     <label for="year">Select Year:</label>
 <select name="Year" id="year">
     <option value="">Any Year</option>
 </select>
     <div id="results"></div>
+<footer>Thats all the movies in this search!</footer>
     <script src="index.js"></script>
 </body>
 </html>
