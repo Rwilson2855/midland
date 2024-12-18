@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript, TypeScript, and Node.js Flashcards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+        .flashcard {
+            border: 1px solid #ddd;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .code {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .question {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .answer {
+            margin-top: 10px;
+            padding-left: 20px;
+            border-left: 3px solid #3498db;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript, TypeScript, and Node.js Flashcards</h1>
+
+    <div class="section">
+        <h2>Node.js</h2>
+
+        <div class="flashcard">
+            <div class="question">Q: What is Node.js?</div>
+            <div class="answer">A: Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a web browser. It allows developers to run JavaScript on the server side.</div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: Why use Node.js?</div>
+            <div class="answer">A: Node.js is valuable because it:
+                <ul>
+                    <li>Uses JavaScript for both frontend and backend (unified language)</li>
+                    <li>Has excellent performance due to non-blocking I/O model</li>
+                    <li>Has a vast ecosystem of packages via npm</li>
+                    <li>Great for real-time applications</li>
+                    <li>Excellent for microservices and scalable applications</li>
+                    <li>Has strong community support</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: What is the command `npm`?</div>
+            <div class="answer">A: npm (Node Package Manager) is Node.js's default package manager that:
+                <ul>
+                    <li>Installs and manages project dependencies</li>
+                    <li>Manages node modules and packages</li>
+                    <li>Helps share code through npm registry</li>
+                    <li>Runs project scripts defined in package.json</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>ES6 JavaScript</h2>
+
+        <div class="flashcard">
+            <div class="question">Q: What is promise chaining?</div>
+            <div class="answer">A: Promise chaining is when you chain multiple .then() methods together to handle asynchronous operations in sequence. Each .then() receives the result of the previous promise.</div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: How do you reverse each word in a sentence?</div>
+            <div class="answer">A: Using ES6 array methods and arrow functions:
+                <div class="code">const reverseWords = str => str.split(' ').map(word => word.split('').reverse().join('')).join(' ');</div>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: What is an arrow function?</div>
+            <div class="answer">A: Arrow functions are a concise syntax for writing function expressions in ES6. They provide shorter syntax and don't bind their own `this` value.
+                <div class="code">const add = (a, b) => a + b;</div>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: How do you rewrite a function as an arrow function?</div>
+            <div class="answer">A: Traditional function converted to arrow function:
+                <div class="code">div.addEventListener("click", e => console.log(e.target.id));</div>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: What is asynchronous programming and why is it important?</div>
+            <div class="answer">A: Asynchronous programming is a programming paradigm that allows code to execute in parallel without blocking the execution of other code. It's important because it:
+                <ul>
+                    <li>Improves application performance</li>
+                    <li>Prevents blocking operations</li>
+                    <li>Enhances user experience</li>
+                    <li>Enables handling of time-consuming tasks efficiently</li>
+                    <li>Critical for handling network requests and file operations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: What is variable hoisting?</div>
+            <div class="answer">A: Variable hoisting is JavaScript's default behavior of moving declarations to the top of their scope. Variables declared with `var` are hoisted and initialized with undefined, while `let` and `const` are hoisted but not initialized (temporal dead zone).</div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: How do you declare classes in ES6?</div>
+            <div class="answer">A: Using the class and extends keywords:
+                <div class="code">// Base class
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+// Subclass
+class Dog extends Animal {
+    bark() {
+        return `${this.name} says woof!`;
+    }
+}</div>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: How do you combine arrays in one line?</div>
+            <div class="answer">A: Using the spread operator:
+                <div class="code">const combined = [...[1,2,3,4,5], ...[6,7,8,9,10]];</div>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: What is a try/catch pattern?</div>
+            <div class="answer">A: A way to handle potential errors in code:
+                <div class="code">try {
+    // Code that might throw an error
+    const result = JSON.parse(invalidJSON);
+} catch (error) {
+    console.error('Error parsing JSON:', error.message);
+} finally {
+    // Code that runs regardless of error
+    console.log('Processing complete');
+}</div>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: What's the difference between Promise chaining and Async/Await?</div>
+            <div class="answer">A:
+                <strong>Promise Chaining:</strong>
+                <div class="code">getData()
+    .then(result => processData(result))
+    .then(processed => saveData(processed))
+    .catch(error => handleError(error));</div>
+
+                <strong>Async/Await:</strong>
+                <div class="code">async function handleData() {
+    try {
+        const result = await getData();
+        const processed = await processData(result);
+        await saveData(processed);
+    } catch (error) {
+        handleError(error);
+    }
+}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>TypeScript</h2>
+
+        <div class="flashcard">
+            <div class="question">Q: What are the benefits of TypeScript over JavaScript?</div>
+            <div class="answer">A: TypeScript offers several advantages:
+                <ul>
+                    <li>Static typing system</li>
+                    <li>Better IDE support with autocompletion</li>
+                    <li>Earlier error detection</li>
+                    <li>Enhanced code maintainability</li>
+                    <li>Better team collaboration</li>
+                    <li>Object-oriented programming features</li>
+                    <li>Improved code documentation through types</li>
+                    <li>Enhanced refactoring capabilities</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: How do you declare a string variable in TypeScript?</div>
+            <div class="answer">A: Using type annotation:
+                <div class="code">let x: string;</div>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: Can browsers read .ts files?</div>
+            <div class="answer">A: No, browsers cannot read .ts files directly. TypeScript files must be compiled (transpiled) to JavaScript using the TypeScript compiler (tsc) before they can be used in a browser.</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Axios / Async</h2>
+
+        <div class="flashcard">
+            <div class="question">Q: What is the axios package and why use it?</div>
+            <div class="answer">A: Axios is a popular HTTP client library for making HTTP requests. Benefits include:
+                <ul>
+                    <li>Promise-based</li>
+                    <li>Automatic JSON data transformation</li>
+                    <li>Client-side XSRF protection</li>
+                    <li>Request/response interceptors</li>
+                    <li>Better error handling</li>
+                    <li>Wide browser support</li>
+                    <li>Consistent API across different platforms</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">Q: How do you make a GET request with axios using async/await?</div>
+            <div class="answer">A: Using async/await pattern:
+                <div class="code">async function fetchData() {
+    try {
+        const response = await axios.get('/example');
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
